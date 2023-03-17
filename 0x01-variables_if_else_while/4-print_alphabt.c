@@ -9,15 +9,18 @@
  */
 int main(void)
 {
-	char c;
-
-	c = 'a';
-	while
-		(c <= 'z') {
-			if ((c != 'q' && c != 'e') && c <= 'z')
-				putchar(c);
-			        c++;
+	char c = 'a';
+	
+	while(c <= 'z')
+	{
+		if (c == 'q' || c == 'e')
+		{
+			c++;
+			continue;
 		}
+		putchar(n);
+		n++;
+	}
 	putchar('\n');
 	return (0);
 }

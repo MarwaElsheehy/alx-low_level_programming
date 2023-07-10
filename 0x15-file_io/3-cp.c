@@ -31,12 +31,12 @@ void error_file(int file_from, int file_to, char *argv[])
 int main(int argc, char *argv[])
 {
 	int file_from, file_to, err_close;
-	size_t i, j;
+	ssize_t i, j;
 	char k[1024];
 
 	if (argc != 3)
 	{
-		printf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
+		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
 		exit(97);
 	}
 
